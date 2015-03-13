@@ -1,0 +1,35 @@
+<link rel="import"
+      href="/bower_components/polymer/polymer.html">
+
+<polymer-element name="server-visualization" attributes="label">
+
+  <template>
+  <style>
+    .inactive {
+      -webkit-filter: grayscale(100%);
+      opacity: .5;
+    }
+  </style>
+  <div>
+    <img id="el" class="{{toggle_class}}" on-click="{{toggle_active}}" src="server.svg" height="200"
+         alt="Nice server"/>
+    <div>{{ label }}</div>
+    <div>
+  </template>
+  <script>
+    Polymer({
+      label: 'foo',
+      toggle_class: 'inactive',
+      ready: function() {
+        this.toggle_active();
+      },
+      toggle_active: function(){
+        if(this.toggle_class != ''){
+          this.toggle_class = '';
+        } else {
+          this.toggle_class = 'inactive';
+        }
+      }
+    });
+  </script>
+</polymer-element>
