@@ -1,0 +1,21 @@
+{
+  "name": "infrastructure",
+  "version": "0.0.0",
+  "authors": [
+    "Sam Elkhateeb <same@nanosn.com>"
+  ],
+  "description": "Infrastructure Visualization Application",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}
